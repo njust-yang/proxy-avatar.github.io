@@ -254,17 +254,90 @@ Finally, the distillation acceleration module reduces redundant diffusion comput
 
 
 
-<div class="video-container" style="display: block;">
-  <div class="video-item" style="width: 100%;">
-    <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline
-           style="width: 100%; height: 200px; object-fit: contain;">
-      <source src="./pics/demo1.mp4" type="video/mp4">
-    </video>
-    <p class="video-description"></p>
-  </div>
-</div>
+<!-- 视频容器，使用 Flexbox 布局 -->
+        <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/demo1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Proxy Avatar</p>
+          </div>
           
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/demo2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Driving Result</p>
+          </div>
+
+                   <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/demo3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Driving Result</p>
+          </div>
+
+                    <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/demo4.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Driving Result</p>
+          </div>
+
+                    <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/demo5.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Driving Result</p>
+          </div>
+
+                    <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/demo6.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">Driving Result</p>
+          </div>
+
         
+
+
+        
+       
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 视频容器使用 Flexbox 布局 */
+  .video-container {
+    display: flex;
+    justify-content: center; /* 居中显示视频 */
+    gap: 20px; /* 视频之间的间距 */
+    flex-wrap: wrap; /* 屏幕空间不足时换行 */
+  }
+
+  /* 单个视频项的样式 */
+  .video-item {
+    width: 25%; /* 设置每个视频的宽度（可根据需求调整） */
+    text-align: center; /* 使描述文本居中 */
+  }
+
+  /* 控制视频的尺寸 */
+  video {
+    width: 100%; /* 使视频自适应容器宽度 */
+    height: auto; /* 自动调整高度，保持视频比例 */
+  }
+
+  /* 视频描述样式 */
+  .video-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
 
         
 
