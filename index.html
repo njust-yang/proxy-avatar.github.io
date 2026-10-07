@@ -252,14 +252,45 @@ Finally, the distillation acceleration module reduces redundant diffusion comput
        
         
         <!-- 视频容器，使用 Flexbox 布局 -->
-        <div class="video-container">
-          <div class="video-item">
-            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
-              <source src="./pics/demo1.mp4" type="video/mp4">
-            </video>
-            <p class="video-description"></p>
-          </div>
-          
+<style>
+  /* 视频容器：一行一个，居中 */
+  .video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* 每个视频项占满整行 */
+  .video-item {
+    width: 100%;      /* 关键：从 25% 改为 100% */
+    text-align: center;
+    margin-bottom: 30px;   /* 视频之间增加垂直间距 */
+  }
+
+  /* 视频自适应宽度 */
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;   /* 可选：圆角 */
+  }
+
+  .video-description {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #555;
+  }
+</style>
+
+
+<div class="video-container">
+  <div class="video-item">
+    <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+      <source src="./pics/demo1.mp4" type="video/mp4">
+    </video>
+    <p class="video-description"></p>
+  </div>
+</div>
           
         
 
