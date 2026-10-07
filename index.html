@@ -220,32 +220,20 @@
 <!-- End paper abstract -->
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3"></h2>
-        <div class="has-text-centered">
-          <img src="./pics/11.png" alt="pipeline" style="max-width: 100%; height: auto;">
-        </div>
-        <h2 class="subtitle has-text-justified">
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
   
 <!-- Paper poster -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Methodology</h2>
+        <h2 class="title is-3">Methodology Overview</h2>
         <div class="has-text-centered">
-          <img src="./pics/Figure 2_2.png" alt="pipeline" style="max-width: 100%; height: auto;">
+          <img src="./pics/pipeline.pdf" alt="pipeline" style="max-width: 100%; height: auto;">
         </div>
         <h2 class="subtitle has-text-justified">
-          GaussianEmoTalker uses the expression basis of GaussianBlendshapes to construct the neutral state space for the talking head (Stage 1). Through a pre-trained audio-to-expression model, it obtains the neutral expression coefficients and emotional expression coefficients. The former is initialized with the corresponding mesh and Gaussian attributes obtained in Stage 1. The latter is derived from the LBS (Linear Blend Skinning) in the emotion state space constructed by 3D Gaussian, resulting in a deformed mesh. The difference between the two meshes, together with the audio, emotion, and intensity labels, is processed by cross-attention to obtain the final Gaussian attribute offset for the specified emotion, generating the final emotional talking head (Stage 2).
+           A 3D Gaussian-based emotion proxy avatar first produces controllable emotional driving videos from audio and emotion conditions. 
+The one-shot portrait motion driving module then transfers identity-independent proxy motion to arbitrary target portraits. 
+Finally, the distillation acceleration module reduces redundant diffusion computation for efficient real-time portrait animation.
         </h2>
       </div>
     </div>
