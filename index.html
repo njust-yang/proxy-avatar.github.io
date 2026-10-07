@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title> GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting</title>
+  <title> Proxy Avatar Meets Low-Rank Caching: Real-Time One-Shot Emotion-Controllable Portrait Animation</title>
   <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +43,94 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    /* ===== 论文标题两行布局 ===== */
+    .publication-title {
+      font-size: 0; /* 清除父容器可能继承的字体大小，让内部span自行控制 */
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    /* 第一行: Proxy Avatar Meets Low-Rank Caching: 动态变色 + 加大字体 */
+    .title-first-line {
+      display: block;
+      font-size: 60px;        /* 比原来36px更大 */
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;     /* 与第二行间距 */
+      line-height: 1.2;
+    }
+
+    /* 动态渐变文字 */
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #ff69b4,
+        #ffdf00,
+        #ffb6c1,
+        #b76e79,
+        #ff7f50,
+        #fa77b6,
+        #4b36e8,
+        #ff7f50,
+        #b76e79,
+        #226e79,
+        #b72279,
+        #b76e64,
+        #b76e79,
+        #716e79,
+        #b72879,
+        #ff7f50,
+        #917f50,
+        #ff69b4
+      );
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: gradientFlow 6s linear infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 300% 50%;
+      }
+    }
+
+    /* 第二行: 剩余标题 黑色静态字体 */
+    .title-second-line {
+      display: block;
+      font-size: 28px;        /* 略小于第一行，但仍清晰可读 */
+      font-weight: 600;
+      color: #0b0e14;         /* 黑色 */
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+    }
+
+    /* 响应式：小屏幕上适当缩小 */
+    @media (max-width: 768px) {
+      .title-first-line {
+        font-size: 40px;
+      }
+      .title-second-line {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .title-first-line {
+        font-size: 32px;
+      }
+      .title-second-line {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -52,10 +140,16 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title" style="font-size: 36px;">
-              <span class="gradient-text">GaussianEmoTalker</span>: Real-Time Emotional Talking
-              Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting
+            <!-- 修改后的标题：两行显示 -->
+            <h1 class="title is-1 publication-title">
+              <span class="title-first-line">
+                <span class="gradient-text">Proxy Avatar Meets Low-Rank Caching:</span>
+              </span>
+              <span class="title-second-line">
+                Real-Time One-Shot Emotion-Controllable Portrait Animation
+              </span>
             </h1>
+
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -407,45 +501,8 @@
     color: #555;
   }
 
-  /* ===== 动态变色标题 ===== */
-  .gradient-text {
-    background: linear-gradient(
-      90deg,
-      #ff69b4,
-      #ffdf00,
-      #ffb6c1,
-      #b76e79,
-      #ff7f50,
-      #fa77b6,
-      #4b36e8,
-      #ff7f50,
-      #b76e79,
-      #226e79,
-      #b72279,
-      #b76e64,
-      #b76e79,
-      #716e79,
-      #b72879,
-      #ff7f50,
-      #917f50,
-      #ff69b4
-    );
-    background-size: 300% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    animation: gradientFlow 6s linear infinite;
-  }
-
-  @keyframes gradientFlow {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 300% 50%;
-    }
-  }
+  /* 注意：之前的 .gradient-text 和 @keyframes 已移至 head 中，此处保留不影响 */
+  /* 但是为了避免重复，也可以保留，但 head 中已定义，效果相同 */
 </style>
 
 
