@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title> GaussianEmoTalker: Real-Time Emotional Talking Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting</title>
+  <link rel="icon" type="image/x-icon" href="static/images/WIS.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title" style="font-size: 36px;"><span style="color: rgb(255, 105, 180);">G</span><span style="color: rgb(255, 223, 0);">a</span><span style="color: rgb(255, 182, 193);">u</span><span style="color: rgb(183, 110, 121);">s</span><span style="color: rgb(255, 127, 80);">s</span><span style="color: rgb(250,119,182);">i</span><span style="color: rgb(75, 54, 232);">a</span><span style="color: rgb(255, 127, 80);">n</span><span style="color: rgb(183, 110, 121);">E</span><span style="color: rgb(34, 110, 121);">m</span><span style="color: rgb(183, 34, 121);">o</span><span style="color: rgb(183, 110, 100);">T</span><span style="color: rgb(183, 110, 121);">a</span><span style="color: rgb(113, 110, 121);">l</span><span style="color: rgb(183, 40, 121);">k</span><span style="color: rgb(255, 127, 80);">e</span><span style="color: rgb(145, 127, 80);">r</span>: Real-Time Emotional Talking
+Head Synthesis with Audio-Driven and Blendshape-Based 3D Gaussian Splatting</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+      
+                    <a href="https://njust-yang.github.io/" target="_blank">Haijie Yang</a><sup>1</sup>,</span>
+                    <a href="https://jessezhang92.github.io/" target="_blank">Zhenyu Zhang</a><sup>2*</sup>,</span>
+                    <a href="https://orcid.org/0009-0000-6097-4569" target="_blank">Yixuan Dong</a><sup>3</sup>,</span>
+                    <a href="http://www.patternrecognition.asia/qian/" target="_blank">Jianjun Qian</a><sup>1</sup>,</span>
+                    <a href="https://scholar.google.com.hk/citations?user=6CIDtZQAAAAJ&hl=zh-CN&oi=ao" target="_blank">Jian Yang</a><sup>1*</sup>,</span>
+                    <br><span>1-PCALab of Nanjing University of Science and Technology</span>
+                    <br><span>2-Nanjing University</span><span> 3-Tsientang Institute for Advanced Study</span>
+                   
+                  </span>
+                  </div>
+
+                 
+
+                  <div class="is-size-3 publication-authors">
+                    <span class="author-block">Under Submission</span>
+
+                  </div>
+
+                
+
+            
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://njust-yang.github.io/GaussianEmoTalker.github.io/" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2607.00959" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Audio-driven talking head synthesis has achieved impressive progress in lip synchronization and visual quality, yet generating expressive emotional avatars with controllable intensity remains challenging, especially under real-time constraints. In this paper, we present GaussianEmoTalker, an audio-driven framework for real-time emotional talking head synthesis based on 3D Gaussian Splatting. Instead of directly predicting the final emotional avatar from speech, we formulate emotional animation as a neutral-to-emotional residual deformation problem. GaussianEmoTalker first constructs an identity-specific neutral talking space with GaussianBlendshapes, which provides high-fidelity Gaussian attributes and phoneme-synchronized neutral motion. It then predicts an emotion-conditioned residual deformation by combining mesh displacement cues, audio features, emotion categories, and intensity encodings. To fuse these heterogeneous signals, we introduce a spatial-audio-emotion attention module that estimates the offsets of Gaussian attributes for expressive and temporally stable rendering. Extensive experiments demonstrate that GaussianEmoTalker achieves competitive video quality, accurate lip synchronization, controllable emotional expression, and real-time rendering compared with recent emotional talking head methods.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3"></h2>
+        <div class="has-text-centered">
+          <img src="./pics/11.png" alt="pipeline" style="max-width: 100%; height: auto;">
+        </div>
+        <h2 class="subtitle has-text-justified">
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+  
+<!-- Paper poster -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Methodology</h2>
+        <div class="has-text-centered">
+          <img src="./pics/Figure 2_2.png" alt="pipeline" style="max-width: 100%; height: auto;">
+        </div>
+        <h2 class="subtitle has-text-justified">
+          GaussianEmoTalker uses the expression basis of GaussianBlendshapes to construct the neutral state space for the talking head (Stage 1). Through a pre-trained audio-to-expression model, it obtains the neutral expression coefficients and emotional expression coefficients. The former is initialized with the corresponding mesh and Gaussian attributes obtained in Stage 1. The latter is derived from the LBS (Linear Blend Skinning) in the emotion state space constructed by 3D Gaussian, resulting in a deformed mesh. The difference between the two meshes, together with the audio, emotion, and intensity labels, is processed by cross-attention to obtain the final Gaussian attribute offset for the specified emotion, generating the final emotional talking head (Stage 2).
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End paper poster -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">The Results of Our Method</h2>
+
+       
+        
+        <!-- 视频容器，使用 Flexbox 布局 -->
+        <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/sad2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">sad level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/sad1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">sad level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/sad3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">sad level 3</p>
+          </div>
+        </div>
+        
+        <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/hap1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">happy level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/hap2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">happy level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/hap3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">happy level 3</p>
+          </div>
+        </div>
+          
+        <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/fear2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">fear level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/fear3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">fear level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/fear1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">fear level 3</p>
+          </div>
+        </div>
+
+          <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/sur1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">surprised level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/sur2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">surprised level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/sur3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">surprised level 3</p>
+          </div>
+        </div>
+
+          <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/ang1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">angry level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/ang2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">angry level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/ang3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">angry level 3</p>
+          </div>
+        </div>
+
+          <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/dis1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">disgusted level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/dis2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">disgusted level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/dis3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">disgusted level 3</p>
+          </div>
+        </div>
+
+          <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/comtep1.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">comtempt level 1</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/comtep2.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">comtempt level 2</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/comtep3.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">comtempt level 3</p>
+          </div>
+        </div>
+
+        
+          <div class="video-container">
+          <div class="video-item">
+            <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
+              <source src="./pics/+30.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">+30 view</p>
+          </div>
+          
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/+60.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">+60 view</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/-30.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">-30 view</p>
+          </div>
+
+          <div class="video-item">
+            <video poster="" id="comp_avatar_2" autoplay controls muted loop playsinline>
+              <source src="./pics/-60.mp4" type="video/mp4">
+            </video>
+            <p class="video-description">-60 view</p>
+          </div>
+        </div>
+
+        
+
+        
+
+
+        
+       
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* 视频容器使用 Flexbox 布局 */
+  .video-container {
+    display: flex;
+    justify-content: center; /* 居中显示视频 */
+    gap: 20px; /* 视频之间的间距 */
+    flex-wrap: wrap; /* 屏幕空间不足时换行 */
+  }
+
+  /* 单个视频项的样式 */
+  .video-item {
+    width: 25%; /* 设置每个视频的宽度（可根据需求调整） */
+    text-align: center; /* 使描述文本居中 */
+  }
+
+  /* 控制视频的尺寸 */
+  video {
+    width: 100%; /* 使视频自适应容器宽度 */
+    height: auto; /* 自动调整高度，保持视频比例 */
+  }
+
+  /* 视频描述样式 */
+  .video-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const videoWrappers = document.querySelectorAll('.video-wrapper');
+      
+        videoWrappers.forEach(wrapper => {
+          const defaultVideo = wrapper.querySelector('.default-video');
+          const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+          const height = wrapper.offsetWidth / aspectRatio;
+      
+          wrapper.style.height = `${height}px`;
+      
+          wrapper.addEventListener('mouseenter', () => {
+            defaultVideo.pause();
+            hoverVideo.play();
+          });
+      
+          wrapper.addEventListener('mouseleave', () => {
+            defaultVideo.play();
+            hoverVideo.pause();
+          });
+        });
+      }); 
+      $(document).ready(function() {
+        var carouselItems = $('.carousel .item');
+        var numItems = carouselItems.length;
+        var numVideos = 5;
+        var currentIndex = 0;
+    
+        $('.carousel').on('click', function() {
+          currentIndex++;
+          if (currentIndex + numVideos <= numItems) {
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          } else {
+            currentIndex = 0;
+            carouselItems.removeClass('active');
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+          }
+        });
+    
+        carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+      });
+    </script>
+  </body>
+  </html>
