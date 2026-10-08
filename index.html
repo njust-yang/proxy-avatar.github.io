@@ -431,38 +431,43 @@ All results are reported under the cross-identity driving setting.
       <div class="column is-full">
         <h2 class="title is-3">Qualitative Comparisons</h2>
 
-        <div class="carousel results-carousel">
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./pics/self1.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">self-reconstruction-1</p>
-          </div>
-          <div class="item">
-            <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./pics/self2.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">self-reconstruction-2</p>
-          </div>
-                    <div class="item">
-            <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./pics/cross1.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">cross-identify-1</p>
-          </div>
-                    <div class="item">
-            <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
-              <source src="./pics/cross2.mp4" type="video/mp4">
-            </video>
-            <p class="video-description">cross-identify-2</p>
-          </div>
-        
+        <div class="video-carousel">
+          <div class="carousel-track">
 
-          <!-- 左右箭头（可选，想隐藏就删掉这两个 button） -->
+            <div class="carousel-slide active">
+              <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./pics/self1.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">self-reconstruction-1</p>
+            </div>
+
+            <div class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./pics/self2.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">self-reconstruction-2</p>
+            </div>
+
+            <div class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./pics/cross1.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">cross-identify-1</p>
+            </div>
+
+            <div class="carousel-slide">
+              <video poster="" autoplay controls muted loop playsinline style="width: 100%;">
+                <source src="./pics/cross2.mp4" type="video/mp4">
+              </video>
+              <p class="video-description">cross-identify-2</p>
+            </div>
+
+          </div>
+
+          <!-- 左右箭头 -->
           <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>
           <button class="carousel-arrow next" aria-label="Next">&#10095;</button>
 
-         
         </div>
 
       </div>
@@ -470,12 +475,148 @@ All results are reported under the cross-identity driving setting.
   </div>
 </section>
 
+<!-- ===== 视频轮播样式（如果页面已有，可忽略重复部分） ===== -->
+<style>
+  .video-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .carousel-track {
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: none;
+    text-align: center;
+  }
+
+  .carousel-slide.active {
+    display: block;
+  }
+
+  .video-description {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #555;
+  }
+
+  /* 左右箭头 */
+  .carousel-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s, background 0.3s;
+    z-index: 10;
+  }
+
+  .video-carousel:hover .carousel-arrow {
+    opacity: 1;
+  }
+
+  .carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .carousel-arrow.prev {
+    left: 10px;
+  }
+
+  .carousel-arrow.next {
+    right: 10px;
+  }
+</style>
+
+<!-- ===== 轮播脚本 ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.video-carousel .carousel-slide');
+  const prevBtn = document.querySelector('.carousel-arrow.prev');
+  const nextBtn = document.querySelector('.carousel-arrow.next');
+  const carousel = document.querySelector('.video-carousel');
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer = null;
+  let isHovering = false;
+  const AUTOPLAY_DELAY = 5000;   // 每 5 秒自动切换
+
+  function clearTimer() {
+    if (timer) {
+      clearInterval(timer);
+      timer = null;
+    }
+  }
+
+  function resetTimer() {
+    clearTimer();
+    if (isHovering) return;
+    timer = setInterval(() => goTo(current + 1), AUTOPLAY_DELAY);
+  }
+
+  function goTo(index) {
+    current = (index + slides.length) % slides.length;
+
+    slides.forEach((s, i) => s.classList.toggle('active', i === current));
+
+    slides.forEach((s, i) => {
+      const v = s.querySelector('video');
+      if (!v) return;
+      if (i === current) {
+        v.currentTime = 0;
+        v.play().catch(() => {});
+      } else {
+        v.pause();
+      }
+    });
+  }
+
+  function manualGoTo(index) {
+    clearTimer();
+    goTo(index);
+    resetTimer();
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => manualGoTo(current - 1));
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => manualGoTo(current + 1));
+  }
+
+  if (carousel) {
+    carousel.addEventListener('mouseenter', () => {
+      isHovering = true;
+      clearTimer();
+    });
+    carousel.addEventListener('mouseleave', () => {
+      isHovering = false;
+      resetTimer();
+    });
+  }
+
+  goTo(0);
+  resetTimer();
+});
+</script>
+
         <div class="video-container">
           <div class="video-item">
+            <h2 class="title is-3">Long video stablity</h2>
             <video poster="" id="comp_avatar_1" autoplay controls muted loop playsinline>
               <source src="./pics/long.mp4" type="video/mp4">
             </video>
-            <p class="video-description">Long video stablity</p>
           </div>
 
 
