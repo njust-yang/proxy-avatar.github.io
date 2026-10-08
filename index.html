@@ -421,7 +421,10 @@ All results are reported under the cross-identity driving setting.
   </div>
 </section>
 
-<!-- ===== 视频轮播 ===== -->
+
+
+
+  <!-- ===== 视频轮播：自动播放 + 手动点击圆点 ===== -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -453,8 +456,21 @@ All results are reported under the cross-identity driving setting.
             </video>
             <p class="video-description">cross-identify-2</p>
           </div>
-      
-        <!-- 圆点指示器容器（Bulma Carousel 自动生成，但也可自定义） -->
+        
+
+          <!-- 左右箭头（可选，想隐藏就删掉这两个 button） -->
+          <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>
+          <button class="carousel-arrow next" aria-label="Next">&#10095;</button>
+
+          <!-- 圆点指示器 -->
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+          </div>
+        </div>
 
       </div>
     </div>
